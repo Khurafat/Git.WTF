@@ -1,0 +1,54 @@
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.easing {
+	  -webkit-transition: all .4s ease-out;
+		-moz-transition: all .4s ease-out;
+		-o-transition: all .4s ease-out;
+	  transition: all .4s ease-out;
+
+	  /* -webkit-transition: color .8s;
+		-moz-transition: color .8s;
+		-o-transition: color .8s;
+	  transition: color .8s; */
+	}
+
+
+a {
+    @apply .text-indigo-600 .easing;
+
+    &:hover {
+        @apply .text-indigo-500;
+    }
+}
+
+.footer {
+    @apply .text-gray-500;
+    @apply .max-w-2xl .mx-auto .mt-8 .py-8 .flex .flex-wrap .justify-between .items-center;
+
+    .copyright > a {
+        @apply .text-gray-500;
+        @apply .no-underline .text-lg;
+
+        &:hover {
+            @apply .text-purple-500;
+        }
+    }
+
+    .links a {
+        @apply .no-underline .mx-1;
+
+        svg {
+            @apply .text-gray-500;
+            fill: config('colors.gray');
+        }
+
+        &:hover svg {
+            @apply .text-purple-500;
+            fill: config('colors.purple');
+        }
+    }
+}
